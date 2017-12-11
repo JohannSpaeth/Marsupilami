@@ -1,0 +1,24 @@
+
+{% extends "MarsupilamiAddressesBundle::layout.html.twig" %}
+
+{% block title %}
+	Accueil - {{ parent() }}
+{% endblock %}
+
+{% block marsupilamiaddresses_body %}
+
+	<h2>Liste des adresses</h2>
+
+	<ul>
+		{% for advert in listAddresses %}
+		<li>
+			<a href="{{ path('marsupilami_addresses_view', {'id': addresses.id}) }}">
+			  {{ addresses.title }}
+			</a>
+			le {{ addresses.date|date('d/m/Y') }}
+		</li>
+	{% else %}
+		<li>Pas (encore !) d'adresses</li>
+	{% endfor %}
+	</ul>
+{% endblock %}

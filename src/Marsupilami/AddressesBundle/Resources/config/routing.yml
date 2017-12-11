@@ -1,0 +1,34 @@
+
+marsupilami_addresses_homepage:
+    path:     /{page}
+    defaults:  
+        _controller: MarsupilamiAddressesBundle:Addresses:index
+        page:        1
+    requirements:
+        page: \d*
+
+marsupilami_addresses_view:
+    path:     /advert/{id}
+    defaults:
+        _controller: MarsupilamiAddressesBundle:Addresses:view
+    requirements:
+        id: \d+
+
+marsupilami_addresses_add:
+    path:      /add
+    defaults:
+        _controller: MarsupilamiAddressesBundle:Addresses:add
+
+marsupilami_addresses_edit:
+    path:      /edit/{id}
+    defaults:
+        _controller: MarsupilamiAddressesBundle:Addresses:edit
+    requirements:
+        id: \d+
+
+marsupilami_addresses_delete:
+    path:      /delete/{id}
+    defaults:
+        _controller: MarsupilamiAddressesBundle:Addresses:delete
+    requirements:
+        id: \d+
