@@ -1,0 +1,5 @@
+marsupilami_addresses:
+    resource: "@MarsupilamiAddressesBundle/Resources/config/routing.yml"
+    prefix:   /
+
+    
